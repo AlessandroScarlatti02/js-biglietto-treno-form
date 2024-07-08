@@ -12,15 +12,19 @@
 <body>
 
     <div class="container">
-        <h1>Hello World!!</h1>
-        <form class="row g-3">
+        <h1>Calcola Qui il prezzo del tuo biglietto</h1>
+        <form class="row g-3" id="form-price">
             <div class="col-md-6">
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="name">
             </div>
             <div class="col-md-6">
-                <label for="surnaame" class="form-label">Cognome</label>
-                <input type="text" class="form-control" id="surnaame">
+                <label for="surname" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="surname">
+            </div>
+            <div class="col-md-8">
+                <label for="km" class="form-label">Inserisci il numero di km che vuoi percorrere</label>
+                <input type="text" class="form-control" id="km">
             </div>
 
 
@@ -28,7 +32,7 @@
             <div class="col-md-4">
                 <label for="age" class="form-label">Età</label>
                 <select id="age" class="form-select">
-                    <option selected>Scegli la tua fascia di Età</option>
+                    <option value=""></option>
                     <option value="m">Minore</option>
                     <option value="a">Adulto</option>
                     <option value="o">Over 65</option>
@@ -38,9 +42,17 @@
 
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Calocla Prezzo</button>
+                <button type="submit" id="calc" class="btn btn-primary">Calocla Prezzo</button>
             </div>
         </form>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <p class="h2">TOTALE:</p>
+            </div>
+            <div class="col-md-8">
+                <p class="h2" id="outprice"></p>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
